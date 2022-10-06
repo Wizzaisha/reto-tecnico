@@ -1,0 +1,39 @@
+.detailsContainer {
+  padding: 0 10rem;
+  text-align: left;
+}
+
+button {
+  margin: 1rem 0;
+}
+
+.link {
+  text-decoration: none;
+  color: blueviolet;
+  font-weight: 700;
+}
+
+.detailsInfo {
+  padding: 3rem;
+  border: 1px solid rgba(0, 0, 0, 0.66);
+  border-radius: 10px;
+}
+
+.subtitle {
+  font-size: 35px;
+}
+
+.characterCards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.characterCard {
+  width: 18rem;
+  padding: 1rem;
+  text-align: center;
+}

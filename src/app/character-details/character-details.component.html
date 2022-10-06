@@ -1,0 +1,34 @@
+<div *ngIf="character" class="characterContainer">
+  <div>
+    <h3 class="subtitle">Details of: {{ character.name }}</h3>
+
+    <button type="button" (click)="goBack()" mat-raised-button color="primary">
+      go back
+    </button>
+
+    <div>
+      <p><span>Name: </span>{{ character.name }}</p>
+      <p><span>Birthday: </span>{{ character.birth_year }}</p>
+      <p><span>Gender: </span>{{ character.gender }}</p>
+      <p><span>Height: </span>{{ character.height }}</p>
+      <p><span>Mass: </span>{{ character.mass }}</p>
+    </div>
+  </div>
+
+  <div *ngIf="starShips.length > 0" class="starshipsContainer">
+    <h3 class="subtitle">Starships</h3>
+    <mat-card *ngFor="let starship of starShips" class="starchipsCard">
+      <mat-card-header
+        ><mat-card-title>{{ starship.name }}</mat-card-title></mat-card-header
+      >
+      <mat-card-content>
+        <p><span>Model: </span>{{ starship.name }}</p>
+        <p><span>Starship Class: </span>{{ starship.starship_class }}</p>
+        <p><span>Passengers: </span>{{ starship.passengers }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="starShips.length === 0">
+    <p>This character does not have starships</p>
+  </div>
+</div>

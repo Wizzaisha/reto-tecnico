@@ -1,0 +1,12 @@
+<div *ngIf="films.length > 0" class="cards">
+  <mat-card class="films-card" *ngFor="let film of films; index as i">
+    <a class="link" routerLink="/films/detail/{{ i + 1 }}"
+      ><mat-card-title>{{ film.title }}</mat-card-title></a
+    >
+    <mat-card-content>
+      <p><span>Release date: </span>{{ film.release_date }}</p>
+      <p><span>Director: </span>{{ film.director }}</p>
+      <p><span>Producer: </span>{{ film.producer }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

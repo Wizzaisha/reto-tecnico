@@ -1,0 +1,16 @@
+.characterContainer {
+  text-align: left;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+button {
+  margin: 1rem 0;
+}
+.subtitle {
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.starchipsCard {
+  margin: 1rem 0;
+}

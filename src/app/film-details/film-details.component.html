@@ -1,0 +1,46 @@
+<div *ngIf="filmDetails" class="detailsContainer">
+  <div class="detailsInfo">
+    <div class="detailsHeader">
+      <h3 class="subtitle">Details of: {{ filmDetails.title }}</h3>
+
+      <button
+        mat-raised-button
+        color="primary"
+        type="button"
+        (click)="goBack()"
+      >
+        go back
+      </button>
+    </div>
+
+    <div class="detailsContent">
+      <p><span>Released date: </span>{{ filmDetails.release_date }}</p>
+      <p><span>Director: </span>{{ filmDetails.director }}</p>
+      <p><span>Producer: </span>{{ filmDetails.producer }}</p>
+
+      <div>
+        <p>Opening:</p>
+        <p>{{ filmDetails.opening_crawl }}</p>
+      </div>
+
+      <div *ngIf="characters" class="characterCards">
+        <mat-card *ngFor="let character of characters" class="characterCard">
+          <mat-card-header>
+            <mat-card-title>{{ character.name }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <p><span>Birth year: </span>{{ character.birth_year }}</p>
+            <p><span>Gender: </span>{{ character.gender }}</p>
+            <p><span>Mass: </span>{{ character.mass }}</p>
+            <p><span>Height: </span>{{ character.height }}</p>
+          </mat-card-content>
+          <mat-card-actions
+            ><a class="link" routerLink="/character/{{ character.id }}"
+              >Read more...</a
+            ></mat-card-actions
+          >
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

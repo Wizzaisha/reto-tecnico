@@ -1,0 +1,20 @@
+.films-card {
+  text-align: left;
+}
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.films-card {
+  width: 18rem;
+}
+
+.link {
+  text-decoration: none;
+  color: blueviolet;
+}
